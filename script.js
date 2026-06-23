@@ -457,7 +457,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // ----------------------------------------------------------------------
     // 7. Evasive Deny Button (Quantum Laser Glitch Dissolve)
     // ----------------------------------------------------------------------
+    
+    denyLeaveBtn.addEventListener('click', (e) => {
+        alert("You cannot deny this Request!");
+        denyLeaveBtn.style.display = 'none';
+    });
+
     denyLeaveBtn.addEventListener('mouseover', (e) => {
+        if (window.innerWidth <= 768) return; // Disable evasion on mobile
+        
         const btnW = denyLeaveBtn.offsetWidth || 160;
         const btnH = denyLeaveBtn.offsetHeight || 42;
         const cardW = letterCard.clientWidth || 590;
