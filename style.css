@@ -342,6 +342,26 @@ body.theme-frost::before { background-image: linear-gradient(rgba(0, 240, 255, 0
     margin-bottom: 4px;
 }
 
+.hr-title {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    letter-spacing: 0.2rem;
+}
+
+.hr-badge {
+    color: var(--accent);
+    font-size: 2rem;
+    vertical-align: middle;
+    opacity: 0.8;
+}
+
+.sys-title {
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    margin-top: 5px;
+}
+
 .app-tagline {
     font-family: var(--font-mono);
     font-size: 0.72rem;
@@ -982,6 +1002,20 @@ body.approved-shake {
         letter-spacing: 0.3rem;
     }
     
+    .hr-title {
+        font-size: 2.2rem;
+        letter-spacing: 0.1rem;
+    }
+    
+    .hr-badge {
+        font-size: 1.3rem;
+    }
+    
+    .sys-title {
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+    }
+    
     .audio-control-fixed {
         left: 20px;
         bottom: 20px;
@@ -997,6 +1031,21 @@ body.approved-shake {
     .giant-emoji-overlay {
         font-size: 8rem;
     }
+}
+
+@media (max-width: 480px) {
+    .letter-card-container { width: 95%; }
+    .letter-card { padding: 25px 15px; }
+    .hr-title { font-size: 1.6rem; letter-spacing: 0.05rem; }
+    .hr-badge { font-size: 1rem; }
+    .sys-title { font-size: 0.85rem; letter-spacing: 0.05rem; }
+    .app-header { left: 15px; top: 15px; border-left-width: 2px; padding-left: 10px; }
+    .letter-actions { flex-direction: column; gap: 10px; padding-top: 15px; margin-top: 20px; }
+    .letter-actions .action-btn { width: 100%; min-width: auto; padding: 12px; }
+    .approved-stamp { font-size: 1.5rem; padding: 5px 12px; border-width: 3px; }
+    .tips-toast { font-size: 0.65rem; padding: 10px 14px; bottom: 70px; }
+    .audio-control-fixed { left: 15px; bottom: 15px; gap: 10px; }
+    .sound-fab, .reset-fab { width: 38px; height: 38px; font-size: 1rem; }
 }
 
 @media (max-height: 600px) {
