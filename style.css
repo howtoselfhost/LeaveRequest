@@ -958,88 +958,21 @@ body.approved-shake {
 }
 
 /* Responsive styles */
+@media (max-width: 900px) {
+    .letter-card-container { width: 85%; }
+}
+
 @media (max-width: 768px) {
     .letter-card-container {
         width: 92%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
     }
     
     .letter-card {
         padding: 35px 24px;
-    }
-    
-    .letter-subject {
-        font-size: 0.95rem;
-    }
-    
-    .letter-body {
-        font-size: 0.92rem;
-        line-height: 1.7;
-    }
-    
-    .approved-stamp {
-        font-size: 2.0rem;
-        padding: 8px 18px;
-    }
-    
-    .core-container {
-        top: 20px;
-        right: 20px;
-        width: 85px;
-        height: 85px;
-    }
-    
-    .app-header {
-        left: 20px;
-        top: 20px;
-        padding-left: 10px;
-    }
-    
-    .app-title {
-        font-size: 1.3rem;
-        letter-spacing: 0.3rem;
-    }
-    
-    .hr-title {
-        font-size: 2.2rem;
-        letter-spacing: 0.1rem;
-    }
-    
-    .hr-badge {
-        font-size: 1.3rem;
-    }
-    
-    .sys-title {
-        font-size: 1rem;
-        letter-spacing: 0.1rem;
-    }
-    
-    .audio-control-fixed {
-        left: 20px;
-        bottom: 20px;
-    }
-    
-    .tips-toast {
-        left: 20px;
-        right: 20px;
-        bottom: 80px;
-        max-width: none;
-    }
-    
-    .giant-emoji-overlay {
-        font-size: 8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .letter-card-container { width: 95%; }
-    .letter-card { 
-        padding: 25px 15px; 
-        max-height: 75vh; 
+        max-height: 80vh;
         overflow-y: auto;
     }
+
     .letter-card::-webkit-scrollbar {
         width: 4px;
     }
@@ -1047,39 +980,53 @@ body.approved-shake {
         background: rgba(0, 255, 159, 0.5);
         border-radius: 4px;
     }
-    .hr-title { font-size: 1.6rem; letter-spacing: 0.05rem; }
-    .hr-badge { font-size: 1rem; }
-    .sys-title { font-size: 0.85rem; letter-spacing: 0.05rem; }
-    .app-header { left: 15px; top: 15px; border-left-width: 2px; padding-left: 10px; }
-    .letter-actions { flex-direction: column; gap: 10px; padding-top: 15px; margin-top: 20px; }
-    .letter-actions .action-btn { width: 100%; min-width: auto; padding: 12px; }
-    .approved-stamp { font-size: 1.5rem; padding: 5px 12px; border-width: 3px; }
-    .tips-toast { font-size: 0.65rem; padding: 10px 14px; bottom: 70px; }
-    .audio-control-fixed { left: 15px; bottom: 15px; gap: 10px; }
-    .sound-fab, .reset-fab { width: 38px; height: 38px; font-size: 1rem; }
-}
-
-@media (max-height: 600px) {
-    .app-header {
-        display: none;
-    }
+    
+    .letter-subject { font-size: 0.95rem; }
+    .letter-body { font-size: 0.92rem; line-height: 1.7; }
+    .approved-stamp { font-size: 2.0rem; padding: 8px 18px; }
+    
     .core-container {
-        top: 15px;
+        top: 20px;
+        right: 20px;
         width: 70px;
         height: 70px;
     }
-    .tips-toast {
-        display: none;
-    }
-    .letter-card-container {
-        position: relative;
-        top: 55%;
-    }
-    .letter-card {
-        padding: 20px 24px;
-    }
-    .letter-actions {
-        margin-top: 15px;
-        padding-top: 15px;
-    }
+    
+    .app-header { left: 20px; top: 20px; padding-left: 10px; }
+    .hr-title { font-size: 2rem; letter-spacing: 0.1rem; }
+    .hr-badge { font-size: 1.2rem; }
+    .sys-title { font-size: 0.9rem; letter-spacing: 0.1rem; }
+    
+    .audio-control-fixed { left: 20px; bottom: 20px; }
+    .tips-toast { left: 20px; right: 20px; bottom: 80px; max-width: none; }
+    .giant-emoji-overlay { font-size: 8rem; }
+}
+
+@media (max-width: 480px) {
+    .letter-card-container { width: 95%; top: 52%; }
+    .letter-card { padding: 20px 15px; max-height: 70vh; }
+    
+    .hr-title { font-size: 1.4rem; letter-spacing: 0.05rem; }
+    .hr-badge { font-size: 0.9rem; }
+    .sys-title { font-size: 0.75rem; letter-spacing: 0.05rem; }
+    
+    .app-header { left: 10px; top: 10px; border-left-width: 2px; padding-left: 8px; }
+    .core-container { top: 10px; right: 10px; width: 55px; height: 55px; }
+    
+    .letter-actions { flex-direction: column; gap: 10px; padding-top: 15px; margin-top: 20px; }
+    .letter-actions .action-btn { width: 100%; min-width: auto; padding: 12px; }
+    
+    .approved-stamp { font-size: 1.3rem; padding: 5px 10px; border-width: 2px; }
+    .tips-toast { font-size: 0.65rem; padding: 10px 14px; bottom: 65px; }
+    .audio-control-fixed { left: 10px; bottom: 10px; gap: 10px; }
+    .sound-fab, .reset-fab { width: 36px; height: 36px; font-size: 1rem; }
+}
+
+@media (max-height: 650px) {
+    .app-header { display: none; }
+    .core-container { top: 10px; right: 10px; width: 50px; height: 50px; }
+    .tips-toast { display: none; }
+    .letter-card-container { position: absolute; top: 50%; }
+    .letter-card { padding: 15px 15px; max-height: 85vh; overflow-y: auto; }
+    .letter-actions { margin-top: 15px; padding-top: 15px; }
 }
