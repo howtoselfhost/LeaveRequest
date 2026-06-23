@@ -458,9 +458,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // 7. Evasive Deny Button (Quantum Laser Glitch Dissolve)
     // ----------------------------------------------------------------------
     
+    let grantScale = 1;
     denyLeaveBtn.addEventListener('click', (e) => {
-        alert("You cannot deny this Request!");
-        denyLeaveBtn.style.display = 'none';
+        grantScale += 0.3;
+        grantLeaveBtn.style.transform = `scale(${grantScale})`;
+        grantLeaveBtn.style.transition = 'transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
     });
 
     denyLeaveBtn.addEventListener('mouseover', (e) => {
