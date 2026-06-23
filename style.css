@@ -860,54 +860,7 @@ body.approved .letter-subject {
     height: 18px;
 }
 
-/* Ambient HUD tips toast banner */
-.tips-toast {
-    position: absolute;
-    bottom: 105px;
-    left: 50px;
-    background: rgba(3, 12, 8, 0.75);
-    border: 1px solid rgba(var(--accent-rgb), 0.25);
-    box-shadow: 0 0 15px rgba(0,0,0,0.6), 0 0 8px rgba(var(--accent-rgb), 0.05);
-    backdrop-filter: blur(10px);
-    border-radius: 4px;
-    padding: 12px 18px;
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    color: var(--text-secondary);
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    z-index: 10;
-    pointer-events: auto;
-    opacity: 0;
-    transform: translateY(10px);
-    animation: slideInLeft 1s forwards ease-out 2.5s;
-    max-width: 440px;
-}
 
-.close-tips-btn {
-    background: none;
-    border: none;
-    color: var(--accent);
-    font-size: 1.1rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.close-tips-btn:hover {
-    color: #fff;
-    text-shadow: 0 0 6px var(--accent);
-}
-
-/* Slide animation */
-@keyframes slideInLeft {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 /* Giant Popping Celebratory Emoji */
 .giant-emoji-overlay {
@@ -998,7 +951,6 @@ body.approved-shake {
     .sys-title { font-size: 0.9rem; letter-spacing: 0.1rem; }
     
     .audio-control-fixed { left: 20px; bottom: 20px; }
-    .tips-toast { left: 20px; right: 20px; bottom: 80px; max-width: none; }
     .giant-emoji-overlay { font-size: 8rem; }
 }
 
@@ -1017,7 +969,6 @@ body.approved-shake {
     .letter-actions .action-btn { width: 100%; min-width: auto; padding: 12px; }
     
     .approved-stamp { font-size: 1.3rem; padding: 5px 10px; border-width: 2px; }
-    .tips-toast { font-size: 0.65rem; padding: 10px 14px; bottom: 65px; }
     .audio-control-fixed { left: 10px; bottom: 10px; gap: 10px; }
     .sound-fab, .reset-fab { width: 36px; height: 36px; font-size: 1rem; }
 }
@@ -1025,7 +976,6 @@ body.approved-shake {
 @media (max-height: 650px) {
     .app-header { display: none; }
     .core-container { top: 10px; right: 10px; width: 50px; height: 50px; }
-    .tips-toast { display: none; }
     .letter-card-container { position: absolute; top: 50%; }
     .letter-card { padding: 15px 15px; max-height: 85vh; overflow-y: auto; }
     .letter-actions { margin-top: 15px; padding-top: 15px; }

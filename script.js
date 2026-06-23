@@ -26,8 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Letter / HUD Panel elements
     const letterCard = document.getElementById('letter-card');
     const letterStatusText = document.getElementById('letter-status-text');
-    const tipsToast = document.getElementById('tips-toast');
-    const closeTipsBtn = document.getElementById('close-tips');
     const giantEmoji = document.getElementById('giant-emoji');
 
     // App state variables
@@ -687,10 +685,6 @@ document.addEventListener('DOMContentLoaded', () => {
         playChime(330, 0.18, 'sawtooth');
     });
 
-    closeTipsBtn.addEventListener('click', () => {
-        tipsToast.style.opacity = '0';
-        setTimeout(() => tipsToast.style.display = 'none', 300);
-    });
 
     // Mouse events on canvas
     canvas.addEventListener('mousemove', (e) => {
