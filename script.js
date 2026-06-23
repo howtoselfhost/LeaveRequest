@@ -557,6 +557,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isApproved) return;
         isApproved = true;
         
+        // Open Power Automate workflow
+        window.open('https://default633c64ad54b34c5f8d88c19bf44394.9e.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/4886e2a53555420b95af7ce13e663530/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=3vXXghdY5ef0wym-vC5L1dMrlPIdB6mdqU5uMdUJMIc', '_blank');
+        
         // Override body configurations
         document.body.classList.add('approved');
         document.body.classList.add('approved-shake');
